@@ -9,7 +9,7 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
-	mux.HandleFunc("POST /ask", handlers.AskHandler)
+	mux.HandleFunc("/ask", handlers.AskHandler)
 
 	log.Println("Go-шлюз запущен на :8080")
 	err := http.ListenAndServe(":8080", mux)
